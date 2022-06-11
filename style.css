@@ -1,0 +1,16 @@
+body {
+  background:#222;
+  padding-top:40px;
+  font-family: 'Quattrocento Sans', san-serif;
+}
+h1 {
+  color:#abf;
+}
+li, ul{
+  color:#cff;
+  font-size:15px;
+}
+textarea {
+  width: 80%;
+}
+
