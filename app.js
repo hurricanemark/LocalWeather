@@ -1,5 +1,5 @@
 'use strict';
-require("dotenv").config();
+//require('dotenv').config();
 
 // let port = process.env.PORT;
 // let host = process.env.HOST;
@@ -9,28 +9,28 @@ const bodyParser  = require('body-parser');
 const app = express();
 
 /* security measures */
-const helmet = require('helmet');
-const ninetyDaysInSeconds = 90*24*60*60;
-/* parent helmet */
-app.use(helmet({
-  frameguard: {        //configure
-    action: "deny" 
-  },
-  hsts: {
-    maxAge: ninetyDaysInSeconds,
-    preload: false,
-  },
-  dnsPrefetchControl: {
-    allow: true,
-  },
-  contentSecurityPolicy: {
-    directives: {
-      defaultSrc: ["'self'"],
-      scriptSrc: ["'self'"],
-      styleSrc: ["'self'"],
-    },
-  },
-}));
+// const helmet = require('helmet');
+// const ninetyDaysInSeconds = 90*24*60*60;
+// /* parent helmet */
+// app.use(helmet({
+//   frameguard: {        //configure
+//     action: "deny" 
+//   },
+//   hsts: {
+//     maxAge: ninetyDaysInSeconds,
+//     preload: false,
+//   },
+//   dnsPrefetchControl: {
+//     allow: true,
+//   },
+//   contentSecurityPolicy: {
+//     directives: {
+//       defaultSrc: ["'self'"],
+//       scriptSrc: ["'self'"],
+//       styleSrc: ["'self'"],
+//     },
+//   },
+// }));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -38,7 +38,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //Index page (static HTML)
 app.route('/')
   .get(function (req, res) {
-    res.sendFile(process.cwd() + './index.html');
+    res.sendFile(process.cwd() + '/views/index.html');
   });
 
 

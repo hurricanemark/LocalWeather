@@ -1,0 +1,31 @@
+{
+  "name": "LocalWeather",
+  "version": "1.0.0",
+  "description": "Use geolocation to get current position in longitude and latitude.  Then query for weather statistics given the lng-lat value.",
+  "main": "app.js",
+  "dependencies": {
+    "dotnet": "^1.1.4",
+    "express": "^4.18.1",
+    "helmet": "^5.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hurricanemark/LocalWeather.git"
+  },
+  "keywords": [
+    "express",
+    "nodejs",
+    "helmet"
+  ],
+  "author": "Mark Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hurricanemark/LocalWeather/issues"
+  },
+  "homepage": "https://github.com/hurricanemark/LocalWeather#readme"
+}

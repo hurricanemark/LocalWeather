@@ -102,5 +102,5 @@ function getLocalWeather(longitude, latitude, message, defaultLocale=0){
     xhttp.send();
 }
 
-showPosition();
+exports.showPosition(); //showPosition();
 
