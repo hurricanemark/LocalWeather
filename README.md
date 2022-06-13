@@ -16,4 +16,4 @@ Let's install express to configure a lightweight Node server.
 
 <strong>Output</strong>
 
-![codepen.io]('./public/Runtime.PNG')
+![codepen.io output](./public/Runtime.PNG)
