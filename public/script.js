@@ -11,10 +11,10 @@ function showPosition() {
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
         //result.innerHTML = "<textarea>"Detecting geological location..</textarea>";
-        this.geoMsg = "Detecting geological location...";
+        //this.geoMsg = "Detecting geological location...";
     } else {
         alert("Sorry, your browser does not support HTML5 geolocation.");
-        this.geoMsg = "Sorry, your browser does not support HTML5 geolocation.";
+        //this.geoMsg = "Sorry, your browser does not support HTML5 geolocation.";
     }
 };
 
@@ -102,5 +102,5 @@ function getLocalWeather(longitude, latitude, message, defaultLocale=0){
     xhttp.send();
 }
 
-exports.showPosition(); //showPosition();
+showPosition();
 
