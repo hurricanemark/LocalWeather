@@ -23,6 +23,7 @@ function successCallback(position) {
     //result.innerHTML = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
 
     // passing lng/let to weather api call
+    this.geoMsg = "Success";
     getLocalWeather(position.coords.longitude, position.coords.latitude, this.geoMsg, 0);
 }
 
