@@ -23,23 +23,23 @@ function successCallback(position) {
     //result.innerHTML = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
 
     // passing lng/let to weather api call
-    this.geoMsg = "Success";
-    getLocalWeather(position.coords.longitude, position.coords.latitude, this.geoMsg, 0);
+    geoMsg = "Your geoLocation is (" + position.coords.longitude +", "+ position.coords.latitude +").  ";
+    getLocalWeather(position.coords.longitude, position.coords.latitude, geoMsg, 0);
 }
 
 // Define callback function for failed attempt
 function errorCallback(error) {
     if(error.code == 1) {
-        this.geoMsg += "You've decided not to share your position, but it's OK. We won't ask you again.  ";
+        geoMsg += "You've decided not to share your position, but it's OK. We won't ask you again.  ";
     } else if(error.code == 2) {
-        this.geoMsg += "The network is down or the positioning service can't be reached.  ";
+        geoMsg += "The network is down or the positioning service can't be reached.  ";
     } else if(error.code == 3) {
-        this.geoMsg += "The attempt timed out before it could get the location data.  ";
+        geoMsg += "The attempt timed out before it could get the location data.  ";
     } else {
-        this.geoMsg += "Geolocation failed due to unknown error.  ";
+        geoMsg += "Geolocation failed due to unknown error.  ";
     }
-    result.innerHTML = "<textarea>"+  this.geoMsg + "Showing weather in London instead.</textarea>";
-    getLocalWeather(51.509865, -0.118092, this.geoMsg, 1);
+    result.innerHTML = "<textarea>"+  geoMsg + "Showing weather in London instead.</textarea>";
+    getLocalWeather(51.509865, -0.118092, geoMsg, 1);
 
 }
 
@@ -74,7 +74,7 @@ function getLocalWeather(longitude, latitude, message, defaultLocale=0){
           let img = `<div class="imgbox" src="${ imgurl }"  alt="Lights" style="width:100%"></div>`
           let htmlSegment = "";
           if (defaultLocale === 0) {
-              htmlSegment += "<textarea width=100%> " + message + " Found " + response.name + ".</textarea>"; 
+              htmlSegment += "<textarea width=100%> " + message + " City of " + response.name + ".</textarea>"; 
           } else {
               message = "";
           }
