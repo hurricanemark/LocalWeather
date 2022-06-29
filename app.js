@@ -9,28 +9,29 @@ const bodyParser  = require('body-parser');
 const app = express();
 
 /* security measures */
-const helmet = require('helmet');
-const ninetyDaysInSeconds = 90*24*60*60;
-/* parent helmet */
-app.use(helmet({
-  frameguard: {        //configure
-    action: "deny" 
-  },
-  hsts: {
-    maxAge: ninetyDaysInSeconds,
-    preload: false,
-  },
-  dnsPrefetchControl: {
-    allow: true,
-  },
-  contentSecurityPolicy: {
-    directives: {
-      defaultSrc: ["'self'"],
-      scriptSrc: ["'self'"],
-      styleSrc: ["'self'"],
-    },
-  },
-}));
+// const helmet = require('helmet');
+// const ninetyDaysInSeconds = 90*24*60*60;
+// /* parent helmet */
+// app.use(helmet({
+//   frameguard: {        //configure
+//     action: "deny" 
+//   },
+//   hsts: {
+//     maxAge: ninetyDaysInSeconds,
+//     preload: false,
+//   },
+//   dnsPrefetchControl: {
+//     allow: true,
+//   },
+//   contentSecurityPolicy: {
+//     directives: {
+//       defaultSrc: ["'self'"],
+//       scriptSrcElement: ["'self'", "'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js'", "'unsafe-eval'"],
+//       scriptSrc: ["'self', 'unsafe-eval'"],
+//       styleSrc: ["'self'"],
+//     },
+//   },
+// }));
 
 app.use("/public", express.static('./public/'));
 app.use(bodyParser.json());
