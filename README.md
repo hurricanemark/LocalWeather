@@ -55,7 +55,7 @@ hurricanemark/localweather   1.0         bb89b0646be4   6 minutes ago   949MB
 
 ### Run docker
 
-Note that Dockerfile exposes port 8080.  This need to be forwarded to a port on your local machine.  i.e. LOCAL_PORT:CONTAINER_PORT for example  4321:8080
+Note that Dockerfile exposes port 8080.  This needs to be forwarded to a port on your local machine.  i.e. LOCAL_PORT:CONTAINER_PORT for example  4321:8080
 
 `docker run -p 4321:8080 bb89b0646be4`
 
@@ -68,6 +68,6 @@ PS D:\DEVEL\NODEJS\BrainUnscramblers\LocalWeather> docker run -p 4321:8080 bb89b
 Local Weather is listening on port 8080
 ```
 
-To access the Local Weather, point your browser to the forwarding port 4321.
+To access the Local Weather app running in docker container, point your browser to the forwarding port 4321.
 
 `http:/localhost:4321`
