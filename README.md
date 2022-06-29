@@ -1,14 +1,21 @@
 # LocalWeather
 Use geolocation to get current position in longitude and latitude.  Then query for weather statistics given the lng-lat value.
 
-## Bootstrap express to existing code
+## NodeJS and Express
 
-Create a folder for your project and initialize it as Node project, `npm init -y`. Create the server file, app.js `touch app.js`, and other directories `mkdir views`.
+I recently wrote this Local Weather app using cloud replit where the bootstraping of node JS is hidden.  All I had to do was to focus on the core logic in app.js, style.css, and index.html.  To create a fully functional development environment locally, I needed to bootstrap NodeJS, Express to my replit code.  Here is how I add bootstrap to my Nodejs project.
 
-Let's install express to configure a lightweight Node server.
+Step 1:  Migrate replit code to local VSCode.
+    Create a folder for your project and initialize it as Node project, `npm init -y`. Create the server file, app.js `touch app.js`, and other directories `mkdir views`.
 
-`npm i express` or `yarn add express`.
+Step 2:  Initialize the folder as a node project
+    ` npm init -y`
+Step 3:  Install *express* to confiure a lightweight Node server
+    `npm install express`
+Step 4:  Install *helmet* to configure runtime security
+    `nmp install helmet`
 
+Now, we are good to start developming and runing from VSCode.
 
 ## Runtime
 
