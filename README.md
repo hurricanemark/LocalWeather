@@ -20,7 +20,7 @@ Let's install express to configure a lightweight Node server.
 
 ## Build and Run Docker Image
 
-After successful build, run the image to verify correctness.  Then it can be pushed to dockerhub or your favorite cloud provider.  
+Build a docker image base on the given Dockerfile and .dockerignore is this folder.  After successful docker build, run the image to verify correctness.  Then it can be pushed to dockerhub or your favorite cloud provider.  
 
 ### Build
 Docker container is built and saved to current working directory.  Replace tag name 'hurricanemark' with your own username.
