@@ -60,8 +60,10 @@ function getLocalWeather(longitude, latitude, message, defaultLocale=0){
   // https://weather-proxy.freecodecamp.rocks/api/current?lat=37.548271&lon=-121.988571
   xhttp.onreadystatechange = function() {
         if( this.readyState == 4 && this.status == 200) {
+          let today = new Date();
           let response = JSON.parse(xhttp.responseText);
           let imgurl = response.weather[0].icon;
+          let localdate = today.toLocaleDateString();
           let locality = "City: " + response.name;
           let datetime = new Date(response.dt);
           let lastupdated = datetime.getDate()+"/"+(datetime.getMonth()+1)+"/"+datetime.getFullYear()+" "+datetime.getHours()+":"+datetime.getMinutes()+":"+datetime.getSeconds();
@@ -80,6 +82,7 @@ function getLocalWeather(longitude, latitude, message, defaultLocale=0){
           }
           
           htmlSegment += `<img class="weather"> 
+            <li>${localdate}</li>
             <li>${locality} 
               <img src=${imgurl}  alt="Lights">
               <ul>${condition}</ul> 
