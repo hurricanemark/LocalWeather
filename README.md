@@ -10,8 +10,10 @@ Step 1:  Migrate replit code to local VSCode.
 
 Step 2:  Initialize the folder as a node project
     ` npm init -y`
+
 Step 3:  Install *express* to confiure a lightweight Node server
     `npm install express`
+
 Step 4:  Install *helmet* to configure runtime security
     `nmp install helmet`
 
