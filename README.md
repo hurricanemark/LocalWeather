@@ -9,7 +9,7 @@ Step 1:  Migrate replit code to local VSCode.
     Create a folder for your project.  Create sub folders 
     
     `mkdir views`
-    
+
     `mkdir public`
 
 Step 2:  Initialize the folder as a node project
@@ -25,6 +25,16 @@ Step 4:  Install *helmet* to configure runtime security
     `nmp install helmet`
 
 Now, we are good to start developming and runing from VSCode.
+
+### Project layout
+
+It is a typical NodeJS project layout.  
+
+'app.js' - server file
+
+'./public/script.js' - interface to https://weather-proxy.freecodecamp.rocks/api/
+
+'./views/index.html' - presentation 
 
 ## Runtime
 

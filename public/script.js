@@ -60,6 +60,7 @@ function getLocalWeather(longitude, latitude, message, defaultLocale=0){
   // https://weather-proxy.freecodecamp.rocks/api/current?lat=37.548271&lon=-121.988571
   xhttp.onreadystatechange = function() {
         if( this.readyState == 4 && this.status == 200) {
+          let condition_msg = "";
           let mydate = new Date();
           let response = JSON.parse(xhttp.responseText);
           let imgurl = response.weather[0].icon;
@@ -75,10 +76,15 @@ function getLocalWeather(longitude, latitude, message, defaultLocale=0){
           let hiTemp = cToF(response.main.temp_max);
           let img = `<div class="imgbox" src="${ imgurl }"  alt="Lights" style="width:100%"></div>`
           let htmlSegment = "";
+
+
           if (defaultLocale === 0) {
-              htmlSegment += "<textarea width=100%> " + message + " City of " + response.name + ".</textarea>"; 
+              htmlSegment += "<textarea width=60%> " + "City of " + response.name + ". " + message + "</textarea>"; 
           } else {
               message = "";
+          }
+          if (temperature >= 90 && response.wind.speed > 15) {
+            condition_msg = "WARNING: High temperature!  Fire danger conditions are possible.";
           }
           
           htmlSegment += `<img class="weather"> 
@@ -96,6 +102,7 @@ function getLocalWeather(longitude, latitude, message, defaultLocale=0){
               <ul>Wind speed: ${ response.wind.speed } km/h</ul>
               <ul>Wind direction: ${ response.wind.deg } &#xb0; </ul>
               <ul>Cloud cover:${ response.clouds.all }</ul>
+              <ul>${condition_msg}</ul>
             </li> </div>`;
           let html = img + htmlSegment;
           let forecast_data = document.querySelector('.localforecast');
