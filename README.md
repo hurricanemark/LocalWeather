@@ -1,11 +1,17 @@
 # LocalWeather
 Use geolocation to get current position in longitude and latitude.  Then query for weather statistics given the lng-lat value.
 
+<<<<<<< HEAD
 
 ## View It Here
 
 [Weather Report on your current location](https://thoracic-past-rainbow.glitch.me/)
 
+=======
+## View It Here
+
+![Weather Report for your location](https://thoracic-past-rainbow.glitch.me/)
+>>>>>>> 4ebb950ab48fe53790e0c24923690a3a598e0003
 
 ## NodeJS and Express
 
