@@ -2,11 +2,6 @@
 Use geolocation to get current position in longitude and latitude.  Then query for weather statistics given the lng-lat value.
 
 
-## View It Here
-
-[Weather report for your location](https://thoracic-rainbow.glitch.me/){:target="_blank"}
-
-
 ## NodeJS and Express
 
 I recently wrote this Local Weather app using cloud replit where the bootstraping of node JS is hidden.  All I had to do was to focus on the core logic in app.js, style.css, and index.html.  To create a fully functional development environment locally, I needed to bootstrap NodeJS, Express to my replit code.  Here is how I add bootstrap to my Nodejs project.
