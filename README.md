@@ -4,8 +4,7 @@ Use geolocation to get current position in longitude and latitude.  Then query f
 
 ## View It Here
 
-
-%md <a href="https://thoracic-past-rainbow.glitch.me/" target="_blank">Weather report for your current location</a>
+[Weather report for your location](https://thoracic-rainbow.glitch.me/){:target="_blank"}
 
 
 ## NodeJS and Express
